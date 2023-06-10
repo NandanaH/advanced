@@ -1,0 +1,24 @@
+package com.example.helloclient;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
+
+
+//@EnableEurekaClient commented as client is before the gateway
+@SpringBootApplication
+public class HelloclientApplication {
+	
+	
+
+	public static void main(String[] args) {
+		SpringApplication.run(HelloclientApplication.class, args);
+	}
+	
+	@Bean
+	public RestTemplate makeTemplate() {
+		return new RestTemplate();
+	}
+
+}
